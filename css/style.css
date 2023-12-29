@@ -55,6 +55,7 @@
   height: 50px;
   font-size: 26px;
   border: solid 2px white;
+  cursor: pointer;
 }
 * body .content .text {
   display: flex;
@@ -65,16 +66,16 @@
 }
 * body .content .roll {
   position: absolute;
-  bottom: 250px;
+  bottom: 20%;
 }
 * body .content .restart {
   position: absolute;
   display: none;
-  bottom: 150px;
+  bottom: 10%;
 }
 * body .content .round {
   position: absolute;
-  top: 200px;
+  top: 20%;
   font-size: 22px;
 }
 

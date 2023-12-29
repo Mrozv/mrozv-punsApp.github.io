@@ -41,7 +41,7 @@ fetch("content.json")
       round = 0;
       array.length = 0;
       restartButton.style.display = "none";
-      verse.textContent = "Losuj!";
+      window.location.href = "settings.html";
     });
   })
   .catch((e) => console.error(e));
