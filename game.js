@@ -18,11 +18,11 @@ fetch("content.json")
       function getRandomInt(max) {
         return Math.floor(Math.random() * max);
       }
-      let num = getRandomInt(106);
+      let num = getRandomInt(sentences.length);
       array.forEach((element) => {
         if (element === num) {
           while (element === num) {
-            num = getRandomInt(106);
+            num = getRandomInt(sentences.length);
           }
         } else {
           verse.textContent = sentences[num];
