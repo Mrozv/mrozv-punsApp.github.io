@@ -8,7 +8,7 @@ let sentences;
 let array = [];
 let round = 0;
 
-fetch("content.txt")
+fetch("content.json")
   .then((res) => res.text())
   .then((text) => {
     sentences = text.split("\n");
