@@ -58,8 +58,8 @@ fetch("content.json")
           window.location.href = "index.html";
         });
       }
-      console.log(array);
-      console.log(resultArray);
+      //console.log(array);
+      //console.log(resultArray);
     });
     restartButton.addEventListener("click", () => {
       localStorage.setItem("storageArray", resultArray);
