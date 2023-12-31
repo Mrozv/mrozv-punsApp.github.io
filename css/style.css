@@ -1,10 +1,12 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-* body {
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +14,8 @@
   background-color: #344955;
   color: white;
 }
-* body .content {
+
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,11 +24,11 @@
   height: 100%;
   background-color: #232f34;
 }
-* body .content .ranking {
+.content .ranking {
   position: relative;
   margin-top: 20px;
 }
-* body .content .ranking::after {
+.content .ranking::after {
   content: "work in progress";
   position: absolute;
   font-size: 12px;
@@ -34,20 +37,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(156, 156, 156, 0.5);
+  background-color: rgba(156, 156, 156, 0.5); /* Zmiana $color na konkretną wartość */
 }
-* body .content .title {
+.content .title {
   font-size: 26px;
   margin-bottom: 20px;
 }
-* body .content .timeBox {
+.content .timeBox {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-* body .content .timeBox .timeElement {
+.content .timeBox .timeElement {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,23 +60,28 @@
   border: solid 2px white;
   cursor: pointer;
 }
-* body .content .text {
+.content .text {
   display: flex;
   justify-content: center;
   text-align: center;
   font-size: 32px;
   width: 80%;
 }
-* body .content .roll {
+.content .roll {
   position: absolute;
   bottom: 20%;
 }
-* body .content .restart {
+.content .finalRestart {
+  position: absolute;
+  display: none;
+  bottom: 20%;
+}
+.content .restart {
   position: absolute;
   display: none;
   bottom: 10%;
 }
-* body .content .round {
+.content .round {
   position: absolute;
   top: 20%;
   font-size: 22px;
