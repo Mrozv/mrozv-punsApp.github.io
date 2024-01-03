@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,6 @@
 
 body {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #344955;
@@ -27,21 +25,12 @@ body {
 .content .ranking {
   position: relative;
   margin-top: 20px;
-}
-.content .ranking::after {
-  content: "work in progress";
-  position: absolute;
-  font-size: 12px;
-  color: tomato;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(156, 156, 156, 0.5); /* Zmiana $color na konkretną wartość */
+  color: white;
 }
 .content .title {
   font-size: 26px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .content .timeBox {
   width: 100%;
@@ -85,6 +74,33 @@ body {
   position: absolute;
   top: 20%;
   font-size: 22px;
+}
+.content .rounds,
+.content .rankingManage {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .rankingManage {
+  height: 100%;
+  margin-top: 315px;
+}
+.content .rankingManage .form {
+  display: flex;
+}
+.content .rankingManage .form .addPlayer {
+  color: white;
+  font-size: 16px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contentSettings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 button {
