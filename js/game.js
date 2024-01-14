@@ -1,3 +1,5 @@
+const playersModal = document.querySelector(".playersModal");
+logPlayers();
 const amountOfVerses = localStorage.getItem("amountOfVerses");
 const contentArea = document.querySelector(".content");
 const rollButton = document.querySelector(".roll");
@@ -5,20 +7,23 @@ const verse = document.querySelector(".text");
 const roundCount = document.querySelector(".round");
 const restartButton = document.querySelector(".restart");
 const finalRestartButton = document.querySelector(".finalRestart");
+const slideButton = document.querySelector(".slide");
+const playersUl = document.querySelector(".playersList");
+const playersArray = playersUl.querySelectorAll(".item");
 
 let sentences;
 let array = [];
 let resultArray = [];
 let round = 0;
 
-if (localStorage.getItem("storageArray") !== null) {
-  resultArray = localStorage.getItem("storageArray").split(",");
+if (localStorage.getItem("players") !== null) {
+  resultArray = localStorage.getItem("players").split(",");
   resultArray = resultArray.map((string) => {
     return parseInt(string, 10);
   });
 }
 
-fetch("content.json")
+fetch("../content.json")
   .then((res) => res.text())
   .then((text) => {
     sentences = text.split("\n");
@@ -58,8 +63,6 @@ fetch("content.json")
           window.location.href = "index.html";
         });
       }
-      //console.log(array);
-      //console.log(resultArray);
     });
     restartButton.addEventListener("click", () => {
       localStorage.setItem("storageArray", resultArray);
@@ -68,3 +71,23 @@ fetch("content.json")
     });
   })
   .catch((e) => console.error(e));
+
+slideButton.addEventListener("click", () => {
+  playersModal.classList.toggle("hide");
+});
+
+function logPlayers() {
+  let listOfPlayers = JSON.parse(localStorage.getItem("players"));
+  let playersUL = document.createElement("ul");
+  playersUL.classList.add("playersList");
+
+  for (let i = 0; listOfPlayers.length > i; i++) {
+    let player = listOfPlayers[i];
+    let name = player.name;
+    let li = document.createElement("li");
+    li.classList.add("item");
+    li.textContent = name;
+    playersUL.append(li);
+  }
+  playersModal.append(playersUL);
+}
