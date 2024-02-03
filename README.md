@@ -1,5 +1,16 @@
-(For first I'm focusing on how game works, after that i will take care of design, so don't really think now the game's design is poorly done please :))
 Live site URL: [Github pages](https://mrozv.github.io/punsApp/)
+
+v 1.2{
+    I added some styles and overall design for the project. Also adding and removing points in game, added ranking.
+    Plans for v 1.3:
+    I. Adjust lists and elements sizes to different screen resolutions
+    II. Add styles to li element in add players page
+    III. Add animation to red element in alert to show how much time is left to disapear
+    IV. Block minus points for players
+    V. Sort from higher to lower points amount in ranking page
+    VI. Input -> add enter works on add button, remove text from input when added
+    VII. Add some animations when round is over(confetti?)
+}
 
 ### Screenshots
 ![First look](https://github.com/Mrozv/punsApp/assets/112627216/55487152-3b49-456b-a84f-975fdcf144c3)

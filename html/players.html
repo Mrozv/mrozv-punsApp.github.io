@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalambury</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/8d4cd6574c.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
+    <div class="alert slide">Wpisz nazwę gracza</div>
+    <div class="bg-gradient"></div>
+    <button class="back button" onclick="history.back()">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
     <div class="content">
       <div class="rankingManage">
         <span class="title">Dodaj graczy</span>
@@ -18,11 +24,10 @@
           <input class="playerName" type="text" placeholder="Nazwa" />
           <button class="addPlayer">Dodaj</button>
         </div>
-        <ul class="listOfPlayers"></ul>
+        <ul class="listOfPlayers" id="scroll"></ul>
         <button class="addPlayerNext"><i class="fa-solid fa-check"></i></button>
       </div>
     </div>
-    <!-- https://polonia.edu.pl/wp-content/uploads/2021/10/slownik-polskie-przyslowia-i-frazeologizmy.pdf -->
     <script src="../js/players.js"></script>
   </body>
 </html>
