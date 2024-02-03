@@ -104,10 +104,22 @@ slideButton.addEventListener("click", () => {
 
   minusButtons.forEach((element) => {
     element.addEventListener("click", (element) => {
+      let listOfPlayers = JSON.parse(localStorage.getItem("players"));
       const listElement = element.target.parentElement.parentElement;
+      console.log(listElement);
       const pointsContainer = listElement.querySelector(".leftContainer");
       const points = pointsContainer.querySelector("#points");
-      points.textContent = parseInt(points.textContent) - 1;
+      const newPoints = (points.textContent = parseInt(points.textContent) - 1);
+
+      const plusOwner = listElement
+        .querySelector(".leftContainer")
+        .querySelector("#name").textContent;
+      listOfPlayers.forEach((element) => {
+        element.name === plusOwner
+          ? (element.points = newPoints)
+          : (element.points = element.points);
+      });
+      localStorage.setItem("players", JSON.stringify(listOfPlayers));
     });
   });
 })();
