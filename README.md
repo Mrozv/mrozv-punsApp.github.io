@@ -1,4 +1,4 @@
-Live site URL: [Netlify]([(https://celebrated-dieffenbachia-bfb856.netlify.app/index.html)])
+Live site URL: [Netlify](https://celebrated-dieffenbachia-bfb856.netlify.app/index.html)
 
 v 1.2{
     I added some styles and overall design for the project. Also adding and removing points in game, added ranking.
