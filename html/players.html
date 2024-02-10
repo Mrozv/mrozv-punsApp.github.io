@@ -12,7 +12,7 @@
     ></script>
   </head>
   <body>
-    <div class="alert slide">Wpisz nazwę gracza</div>
+    <div class="alertsContainer"></div>
     <div class="bg-gradient"></div>
     <button class="back button" onclick="history.back()">
       <i class="fa-solid fa-arrow-left"></i>
@@ -22,10 +22,12 @@
         <span class="title">Dodaj graczy</span>
         <div class="form">
           <input class="playerName" type="text" placeholder="Nazwa" />
-          <button class="addPlayer">Dodaj</button>
+          <button class="addPlayer button">Dodaj</button>
         </div>
         <ul class="listOfPlayers" id="scroll"></ul>
-        <button class="addPlayerNext"><i class="fa-solid fa-check"></i></button>
+        <button class="addPlayerNext button">
+          <i class="fa-solid fa-check"></i>
+        </button>
       </div>
     </div>
     <script src="../js/players.js"></script>

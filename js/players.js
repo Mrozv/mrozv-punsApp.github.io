@@ -1,8 +1,16 @@
+//variables
+
 const nextPage = document.querySelector(".addPlayerNext");
 const nameInput = document.querySelector(".playerName");
 const addButton = document.querySelector(".addPlayer");
 const playersUl = document.querySelector(".listOfPlayers");
 const alert = document.querySelector(".alert");
+const alertsContainer = document.querySelector(".alertsContainer");
+let isAnimated = false;
+
+readyButtonVisibility();
+
+//functions
 
 (() => {
   try {
@@ -17,11 +25,7 @@ const alert = document.querySelector(".alert");
   }
 })();
 
-nextPage.addEventListener("click", () => {
-  window.location.href = "../html/game.html";
-});
-
-addButton.addEventListener("click", () => {
+function add() {
   if (nameInput.value !== "") {
     const player = {
       name: nameInput.value,
@@ -35,13 +39,12 @@ addButton.addEventListener("click", () => {
 
     const li = createPlayerElement(player);
     playersUl.appendChild(li);
+    nameInput.value = "";
   } else {
-    alert.classList.remove("slide");
-    setTimeout(() => {
-      alert.classList.add("slide");
-    }, 5000);
+    alertFunc();
   }
-});
+  readyButtonVisibility();
+}
 
 function createPlayerElement(player) {
   const li = document.createElement("li");
@@ -64,7 +67,45 @@ function createPlayerElement(player) {
       players.splice(index, 1);
       localStorage.setItem("players", JSON.stringify(players));
     }
+    readyButtonVisibility();
   });
 
   return li;
 }
+
+function alertFunc() {
+  if (!isAnimated) {
+    isAnimated = true;
+    const alert = document.createElement("div");
+    alert.classList.add("alert");
+    alert.textContent = "Podaj nazwę gracza";
+    alertsContainer.appendChild(alert);
+    setTimeout(() => {
+      isAnimated = false;
+      alert.remove();
+    }, 3000);
+  }
+}
+
+function readyButtonVisibility() {
+  const players = JSON.parse(localStorage.getItem("players")) || [];
+  const nextPage = document.querySelector(".addPlayerNext");
+
+  if (players.length === 0) {
+    nextPage.style.display = "none";
+  } else {
+    nextPage.style.display = "block";
+  }
+}
+
+//eventlisteners
+
+nextPage.addEventListener("click", () => {
+  window.location.href = "../html/game.html";
+});
+addButton.addEventListener("click", add);
+nameInput.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    add();
+  }
+});

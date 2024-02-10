@@ -12,17 +12,20 @@
     ></script>
   </head>
   <body>
+    <canvas id="confetti"></canvas>
     <div class="bg-gradient"></div>
     <div class="content">
       <span class="round"></span>
       <span class="text">Losuj!</span>
-      <button class="roll"><i class="fa-solid fa-dice"></i></button>
-      <button class="restart"><i class="fa-solid fa-rotate-right"></i></button>
-      <button class="finalRestart">
+      <button class="roll button"><i class="fa-solid fa-dice"></i></button>
+      <button class="restart button">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+      <button class="finalRestart button">
         <i class="fa-solid fa-circle-play"></i>
       </button>
     </div>
-    <i class="listOfPlayersButton fa-solid fa-caret-down transition"></i>
+    <i class="listOfPlayersButton fa-solid fa-caret-down"></i>
     <div class="playersModal hide"></div>
     <script src="../js/game.js"></script>
   </body>

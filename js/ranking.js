@@ -1,19 +1,26 @@
 const playersUl = document.querySelector(".ranking");
+const title = document.querySelector(".title");
 
 let raw = localStorage.getItem("players");
 raw = JSON.parse(raw);
-try {
-  for (let i = 0; i !== raw.length; i++) {
-    const li = document.createElement("li");
-    const name = document.createElement("div");
-    const score = document.createElement("div");
 
-    name.textContent = raw[i].name;
-    score.textContent = raw[i].points;
+let rawSorted = raw.sort((a, b) => {
+  return b.points - a.points;
+});
 
-    li.append(name, score);
-    playersUl.appendChild(li);
-  }
-} catch (error) {
-  console.log(error);
+for (let i = 0; i !== rawSorted.length; i++) {
+  const li = document.createElement("li");
+  const name = document.createElement("div");
+  const score = document.createElement("div");
+
+  name.textContent = rawSorted[i].name;
+  score.textContent = rawSorted[i].points;
+
+  li.append(name, score);
+  playersUl.appendChild(li);
+}
+if (rawSorted.length === 0) {
+  title.textContent = "Brak graczy";
+} else {
+  title.textContent = "Ranking";
 }
