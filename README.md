@@ -5,8 +5,8 @@ v 1.2
 
 
 Plans for v 1.3
-- [x] Adjust lists and elements sizes to different screen resolutions
-- [x] II. Add styles to li element in add players page
+- [] Adjust lists and elements sizes to different screen resolutions
+- [] II. Add styles to li element in add players page
 - [x] III. Add animation to red element in alert to show how much time is left to disapear
 - [x] IV. Block minus points for players
 - [x] V. Sort from higher to lower points amount in ranking page
