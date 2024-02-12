@@ -1,8 +1,9 @@
 Live site URL: [Netlify](https://celebrated-dieffenbachia-bfb856.netlify.app/index.html)
 
-v 1.2
-- I added some styles and overall design for the project. Also adding and removing points in game, added ranking.
-
+v 1.4
+- Design change
+- Added detailing of the ranking podium
+- Added information tiles to the start screen
 
 v 1.3
 - I adjusted lists and elements sizes to different screen resolutions
@@ -14,5 +15,5 @@ v 1.3
 - I added confetti at the end of the round
 - I've dealt with situations when lists are empty
 
-v 1.4
-In planning phase...
+v 1.2
+- I added some styles and overall design for the project. Also adding and removing points in game, added ranking.
