@@ -8,11 +8,12 @@ const roundCount = document.querySelector(".round");
 const restartButton = document.querySelector(".restart");
 const finalRestartButton = document.querySelector(".finalRestart");
 const slideButton = document.querySelector(".listOfPlayersButton");
-const playersUl = document.querySelector(".playersList");
+const playersUl = document.querySelector(".elementsContainer");
 const playersArray = playersUl.querySelectorAll(".item");
 const plusButtons = document.querySelectorAll("#plus");
 const minusButtons = document.querySelectorAll("#minus");
-const playersListArrow = document.querySelector(".fa-caret-down");
+const playersListArrow = document.querySelector(".listOfPlayersButton");
+const playersListArrowIcon = document.querySelector(".fa-caret-down");
 
 let sentences;
 let array = [];
@@ -49,6 +50,7 @@ fetch("../content.json")
       verse.textContent = sentences[num];
       array.push(num);
       resultArray.push(num);
+
       if (array.length > amountOfVerses) {
         confetti();
         verse.textContent = "Koniec rundy!";
@@ -68,6 +70,7 @@ fetch("../content.json")
           window.location.href = "../index.html";
         });
       }
+      rounds(roundCount);
     });
     restartButton.addEventListener("click", () => {
       localStorage.setItem("storageArray", resultArray);
@@ -78,7 +81,7 @@ fetch("../content.json")
   .catch((e) => console.error(e));
 
 slideButton.addEventListener("click", () => {
-  playersModal.classList.toggle("hide");
+  playersModal.classList.toggle("show");
 });
 
 (() => {
@@ -129,13 +132,23 @@ slideButton.addEventListener("click", () => {
 })();
 
 playersListArrow.addEventListener("click", () => {
-  playersListArrow.classList.toggle("flip");
+  playersListArrowIcon.classList.toggle("flip");
 });
+
+function rounds(param) {
+  let restartButton = document.querySelector(".restart");
+  restartButton = getComputedStyle(restartButton).display;
+  if (restartButton === "block") {
+    param.style.padding = "0";
+  } else {
+    param.style.padding = "0.5rem 1rem";
+  }
+}
 
 function logPlayers() {
   let listOfPlayers = JSON.parse(localStorage.getItem("players"));
   let playersUL = document.createElement("ul");
-  playersUL.classList.add("playersList");
+  playersUL.classList.add("elementsContainer");
 
   for (let i = 0; listOfPlayers.length > i; i++) {
     const player = listOfPlayers[i];
@@ -158,19 +171,21 @@ function logPlayers() {
     pointsEl.setAttribute("id", "points");
 
     addPoints.classList.add("pointsBtn");
+    addPoints.classList.add("btnPoints");
     addPoints.setAttribute("id", "plus");
 
     minusPoints.classList.add("pointsBtn");
+    minusPoints.classList.add("btnPoints");
     minusPoints.setAttribute("id", "minus");
 
     addPoints.textContent = "+";
     minusPoints.textContent = "-";
 
     pointsEl.textContent = points;
-    li.classList.add("item");
 
     leftContainer.append(playerNameContainer, pointsEl);
     rightContainer.append(addPoints, minusPoints);
+    li.classList.add("listElement");
 
     li.append(leftContainer, rightContainer);
     playersUL.append(li);

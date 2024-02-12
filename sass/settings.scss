@@ -1,0 +1,18 @@
+@use "_components" as *;
+
+body {
+  .content {
+    .settings {
+      display: flex;
+      flex-direction: column;
+      .center {
+        justify-content: center;
+      }
+      .elementsContainer {
+        .listElement {
+          border: none;
+        }
+      }
+    }
+  }
+}

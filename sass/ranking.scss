@@ -1,0 +1,46 @@
+@use "_components" as *;
+
+body {
+  .content {
+    .rankingBox {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      min-width: auto;
+      .rankingContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 1rem;
+        max-height: 500px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .listElement:nth-child(1) {
+          transform: scale(1.1);
+          background-color: rgb(10, 58, 204);
+        }
+        .listElement:nth-child(2) {
+          transform: scale(1.06);
+          background-color: rgb(33, 76, 206);
+        }
+        .listElement:nth-child(3) {
+          transform: scale(1.03);
+          background-color: rgb(48, 91, 218);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    .content {
+      .rankingBox {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@include scrollBar(".rankingContainer");

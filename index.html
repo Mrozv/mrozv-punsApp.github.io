@@ -5,16 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalambury</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
     <div class="bg-gradient"></div>
     <div class="content">
-      <div class="buttons">
-        <button class="start button">start</button>
-        <button class="ranking button">ranking</button>
+      <div class="containerTop">
+        <div class="buttons">
+          <button class="start btn">start</button>
+          <button class="ranking btn">ranking</button>
+        </div>
+      </div>
+      <div class="containerBottom">
+        <div class="card">
+          <div class="title">O grze</div>
+          <div class="description">
+            RiddleRift to gra w kalambury dla wielu graczy.
+            <br />
+            <br />
+            Standardowa rozgrywka składa się z kilku rund, i polega na tym aby
+            gracze na zmiane pokazywali i zgadywali hasła pokazujące się na
+            ekranie. Zbiór gry mieści 100 haseł!
+            <br />
+            <br />
+            Gracz z największą liczbą punktów na końcu gry zostanie koronowany
+            zwycięzcą(zakładka ranking)! Bawcie się dobrze!
+          </div>
+        </div>
+        <div class="card">
+          <div class="title">Devlog</div>
+          <div class="description dev">
+            <ul>
+              v 1.4
+              <li>Zmiana designu.</li>
+              <li>Dodane wyszczególnienie podium rankingu.</li>
+              <li>Dodanie kafelków z informacjami na ekranie startowym.</li>
+              <li>Aktualizacja powiedzeń.</li>
+            </ul>
+            <ul>
+              v 1.3
+              <li>
+                Dostosowanie rozmiaru list i elementów do różnych rozdzielczości
+                ekranu.
+              </li>
+              <li>
+                Dodanie stylów do elementu listy na stronie dodawania graczy
+              </li>
+              <li>
+                Dodanie animacji do czerwonego elementu w alercie, aby pokazać,
+                ile czasu pozostało do zniknięcia powiadomienia.
+              </li>
+              <li>Zablokowanie dodawania punktów ujemnych dla graczy.</li>
+              <li>
+                Od teraz gracze są sortowani na stronie rankingowej od
+                najwyższej do najniższej liczby punktów.
+              </li>
+              <li>
+                Enter działa na dodawanie graczy. Po dodaniu gracza pole do
+                wpisywania jest opróżniane.
+              </li>
+              <li>Na koniec rundy pojawia się konfetti.</li>
+              <li>Gdy listy są puste pojawiają się odpowiednie komunikaty.</li>
+            </ul>
+            <ul>
+              v 1.2
+              <li>Dodane zostało kilka stylów i ogólny design do projektu.</li>
+              <li>Usuwanie punktów w grze.</li>
+              <li>Dodany ranking.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="title">Jak grać</div>
+          <div class="description carousel">
+            <div>Wybierz liczbe rund!</div>
+            <div>Dodaj graczy!</div>
+            <div>Graj!</div>
+          </div>
+        </div>
       </div>
     </div>
+
     <script src="js/buttons.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript" src="js/slick.js"></script>
   </body>
 </html>

@@ -18,6 +18,7 @@ readyButtonVisibility();
 
     raw.forEach((player) => {
       const li = createPlayerElement(player);
+      li.classList.add("listElement");
       playersUl.appendChild(li);
     });
   } catch (error) {
@@ -38,6 +39,7 @@ function add() {
     localStorage.setItem("players", JSON.stringify(players));
 
     const li = createPlayerElement(player);
+    li.classList.add("listElement");
     playersUl.appendChild(li);
     nameInput.value = "";
   } else {

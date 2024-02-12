@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalambury</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/players.css" />
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/8d4cd6574c.js"
@@ -14,18 +15,18 @@
   <body>
     <div class="alertsContainer"></div>
     <div class="bg-gradient"></div>
-    <button class="back button" onclick="history.back()">
+    <button class="back btn backBtn" onclick="history.back()">
       <i class="fa-solid fa-arrow-left"></i>
     </button>
     <div class="content">
+      <span class="title">Dodaj graczy</span>
       <div class="rankingManage">
-        <span class="title">Dodaj graczy</span>
         <div class="form">
           <input class="playerName" type="text" placeholder="Nazwa" />
-          <button class="addPlayer button">Dodaj</button>
+          <button class="addPlayer btn">Dodaj</button>
         </div>
-        <ul class="listOfPlayers" id="scroll"></ul>
-        <button class="addPlayerNext button">
+        <ul class="listOfPlayers elementsContainer" id="scroll"></ul>
+        <button class="addPlayerNext btn">
           <i class="fa-solid fa-check"></i>
         </button>
       </div>

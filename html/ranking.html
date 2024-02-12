@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalambury</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/ranking.css" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/8d4cd6574c.js"
@@ -13,12 +14,14 @@
   </head>
   <body>
     <div class="bg-gradient"></div>
-    <button class="back button" onclick="history.back()">
+    <button class="back backBtn btn" onclick="history.back()">
       <i class="fa-solid fa-arrow-left"></i>
     </button>
     <div class="content">
-      <span class="title">Ranking</span>
-      <ul class="ranking"></ul>
+      <div class="rankingBox">
+        <span class="title">Ranking</span>
+        <ul class="rankingContainer"></ul>
+      </div>
     </div>
     <script src="/js/ranking.js"></script>
   </body>

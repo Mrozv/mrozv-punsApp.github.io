@@ -157,26 +157,13 @@ ul li {
     width: 0;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  color: white;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scrollbar-width: thin;
-}
-body .content {
+body .content .settings {
   display: flex;
   flex-direction: column;
+}
+body .content .settings .center {
   justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  width: 80%;
-}/*# sourceMappingURL=style.css.map */
+}
+body .content .settings .elementsContainer .listElement {
+  border: none;
+}/*# sourceMappingURL=settings.css.map */

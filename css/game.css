@@ -157,26 +157,76 @@ ul li {
     width: 0;
   }
 }
-* {
-  margin: 0;
+body .playersModal {
+  visibility: hidden;
+  z-index: 900;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+}
+body .elementsContainer {
+  min-width: 220px;
+}
+body .elementsContainer li {
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  color: white;
+  gap: 2rem;
+}
+body .elementsContainer li .leftContainer,
+body .elementsContainer li .rightContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .elementsContainer li .leftContainer .pointsBtn,
+body .elementsContainer li .rightContainer .pointsBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  cursor: pointer;
+  border-left: 1px solid white;
+}
+body .elementsContainer li .leftContainer {
+  padding-left: 1rem;
+  width: 8rem;
+  justify-content: space-between;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scrollbar-width: thin;
+.listOfPlayersButton {
+  z-index: 1000;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
-body .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  width: 80%;
-}/*# sourceMappingURL=style.css.map */
+
+.content {
+  gap: 10rem;
+}
+.content .restart,
+.content .finalRestart {
+  display: none;
+}
+.content .text {
+  background-color: royalblue;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+.content .round {
+  font-size: 24px;
+  border-radius: 8px;
+  background-color: royalblue;
+}/*# sourceMappingURL=game.css.map */

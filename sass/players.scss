@@ -1,0 +1,38 @@
+@use "_components" as *;
+
+body {
+  .content {
+    .rankingManage {
+      .form {
+        display: flex;
+        gap: 0.5rem;
+        .addPlayer {
+          padding: 0.25em 0.5em;
+          border-radius: 8px;
+          font-size: 18px;
+        }
+
+        .playerName {
+          padding: 0.5em 0.5em;
+          border-radius: 8px;
+          font-size: 18px;
+          border: none;
+          color: #2d2d2d;
+          width: 100%;
+        }
+      }
+      .listOfPlayers {
+        margin: 1rem 0;
+        .deleteButton {
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+        }
+      }
+      .addPlayerNext {
+        margin: auto;
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalambury</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/game.css" />
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/8d4cd6574c.js"
@@ -16,17 +17,19 @@
     <div class="bg-gradient"></div>
     <div class="content">
       <span class="round"></span>
-      <span class="text">Losuj!</span>
-      <button class="roll button"><i class="fa-solid fa-dice"></i></button>
-      <button class="restart button">
+      <span class="text title">Losuj!</span>
+      <button class="roll btn"><i class="fa-solid fa-dice"></i></button>
+      <button class="restart btn">
         <i class="fa-solid fa-rotate-right"></i>
       </button>
-      <button class="finalRestart button">
+      <button class="finalRestart btn">
         <i class="fa-solid fa-circle-play"></i>
       </button>
     </div>
-    <i class="listOfPlayersButton fa-solid fa-caret-down"></i>
-    <div class="playersModal hide"></div>
+    <div class="listOfPlayersButton btn">
+      <i class="fa-solid fa-caret-down transition"></i>
+    </div>
+    <div class="playersModal"></div>
     <script src="../js/game.js"></script>
   </body>
 </html>

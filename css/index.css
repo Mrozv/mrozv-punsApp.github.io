@@ -157,26 +157,80 @@ ul li {
     width: 0;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  color: white;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scrollbar-width: thin;
-}
-body .content {
+body .content .containerTop {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
+}
+body .content .containerTop .buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+body .content .containerBottom {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+body .content .containerBottom .card {
+  background-color: royalblue;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 33%;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 400px;
+  overflow: auto;
+}
+body .content .containerBottom .card .description {
+  font-size: 16px;
+  max-height: 300px;
+  overflow: auto;
+}
+body .content .containerBottom .card .dev::-webkit-scrollbar {
+  width: 8px;
+}
+body .content .containerBottom .card .dev::-webkit-scrollbar-thumb {
+  background-color: rgb(187, 204, 255);
+  border-radius: 6px;
+}
+body .content .containerBottom .card .carousel div {
+  text-align: center;
+}
+body .content .containerBottom .card .carousel .slick-dots {
+  gap: 1rem;
   justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  width: 80%;
-}/*# sourceMappingURL=style.css.map */
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+body .content .containerBottom .card .carousel .slick-dots .slick-active button {
+  transform: scale(1.1);
+  background-color: rgb(255, 255, 255);
+}
+body .content .containerBottom .card .carousel .slick-dots li {
+  padding: 0;
+}
+body .content .containerBottom .card .carousel .slick-dots li button {
+  background: none;
+  height: 0.7rem;
+  width: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media (max-width: 996px) {
+  body {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body .content .containerBottom {
+    align-items: center;
+    flex-direction: column;
+  }
+  body .content .containerBottom .card {
+    width: 80%;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -157,26 +157,32 @@ ul li {
     width: 0;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  color: white;
-}
-
-body {
-  min-height: 100vh;
+body .content .rankingManage .form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  scrollbar-width: thin;
+  gap: 0.5rem;
 }
-body .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  width: 80%;
-}/*# sourceMappingURL=style.css.map */
+body .content .rankingManage .form .addPlayer {
+  padding: 0.25em 0.5em;
+  border-radius: 8px;
+  font-size: 18px;
+}
+body .content .rankingManage .form .playerName {
+  padding: 0.5em 0.5em;
+  border-radius: 8px;
+  font-size: 18px;
+  border: none;
+  color: #2d2d2d;
+  width: 100%;
+}
+body .content .rankingManage .listOfPlayers {
+  margin: 1rem 0;
+}
+body .content .rankingManage .listOfPlayers .deleteButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+body .content .rankingManage .addPlayerNext {
+  margin: auto;
+}/*# sourceMappingURL=players.css.map */
